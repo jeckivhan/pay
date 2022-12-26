@@ -281,6 +281,7 @@
     } elseif ($_GET['act'] == 'onoff') {
       $a = $_GET['a'];
       $query = mysqli_query($conn, "UPDATE project SET status='$a' where idHosting = '$_GET[id]'");
+
       if ($query) {
         echo "<script>document.location='index.php?view=keuangan_hosting';</script>";
       } else {
